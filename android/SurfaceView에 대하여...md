@@ -52,10 +52,12 @@ class MySurfaceHost(context: Context) : FrameLayout(context), SurfaceHolder.Call
 ## 5) 렌더링 경로 (두 가지)
 
 1. Canvas 경로
+   
 `SurfaceHolder.lockCanvas()` → 그리기 → `unlockCanvasAndPost()`
   - CPU 라스터 기반. 간단한 데모/도형 등.
 
 2. 하드웨어 경로
+   
 디코더/GL이 Surface로 직접 출력
   - MediaCodec 디코더, MediaPlayer/ExoPlayer, Camera 프리뷰.
   - 고성능/저지연의 핵심.
