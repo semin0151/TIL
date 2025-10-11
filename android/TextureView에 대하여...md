@@ -17,7 +17,7 @@
   - `BufferQueue`의 소비자. `Producer`가 쓴 프레임을 받아 GL 텍스처로 제공.
   - `Surface`를 만들어 `Producer`에 넘길 수 있음: `Surface(surfaceTexture)`.
 - `Surface` (Producer 핸들)
-  - 디코더/카메라/GL 같은 Producer가 프레임을 쓰는 출력 단.
+  - 디코더/카메라/GL 같은 `Producer`가 프레임을 쓰는 출력 단.
   - `MediaCodec.configure(..., surface, ...)`, `player.setVideoSurface(surface)`.
 - `Producer`
   - `MediaPlayer`/`ExoPlayer`/`MediaCodec`/`Camera`/`GL` 등 → `Surface(SurfaceTexture)`에 직접 렌더.
