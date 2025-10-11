@@ -18,8 +18,8 @@
   - `Surface` 접근/수명 관리 인터페이스. (surfaceCreated/Changed/Destroyed)
   - `SurfaceView`가 소유한 `Surface`에 대한 액세스/수명 관리 인터페이스.
 - `Surface`:
-  - 디코더/GL이 실제 픽셀을 쓰는 대상(버퍼 큐의 Consumer 측 핸들).
-  - 디코더/GL/카메라 등 Producer가 프레임을 써 넣으면, 이 Surface가 시스템 합성 단계로 넘김.
+  - `Surface`는 디코더·GL·카메라 같은 `Producer`가 프레임을 써 넣는 `Producer` 측 출력 핸들이다.
+  - `Producer`가 `Surface`에 큐잉한 프레임은 `BufferQueue`의 `Consumer`(=`SurfaceFlinger`) 가 가져가 VSync에 맞춰 화면으로 합성한다.
 - `Producer`:
   - `MediaPlayer`, `ExoPlayer`, `MediaCodec`, `Camera` 등 → `Surface`에 직접 렌더.
 - `SurfaceFlinger` (시스템 합성자)
