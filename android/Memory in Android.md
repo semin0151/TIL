@@ -35,12 +35,12 @@ Android의 ART(Android Runtime)는 JVM과 유사한 구조를 가지며,
 
 ### 📗 Heap
 
-- 역할: 런타임 중 생성되는 객체, 배열, 문자열 등이 저장되는 영역
-- 특징:
+- **역할:** 런타임 중 생성되는 객체, 배열, 문자열 등이 저장되는 영역
+- **특징:**
     - 앱 내 대부분의 참조 타입(Bitmap, View, List 등)이 저장됨
     - 런타임 중 크기가 가변적으로 확장됨
     - GC(Garbage Collector)의 관리 대상
-- 예시:
+- **예시:**
 
 ```kotlin
 val bitmap = Bitmap.createBitmap(100, 100, Bitmap.Config.ARGB_8888)
@@ -49,12 +49,12 @@ val list = mutableListOf<String>()
 
 ### 📙 Stack
 
-- 역할: 함수 호출 시 생성되는 스택 프레임(Stack Frame)에 지역 변수, 매개변수, 리턴 주소가 저장되는 영역
-- 특징:
+- **역할:** 함수 호출 시 생성되는 스택 프레임(Stack Frame)에 지역 변수, 매개변수, 리턴 주소가 저장되는 영역
+- **특징:**
     - 함수가 호출될 때마다 프레임이 생성되고, 종료 시 자동 해제됨
     - 크기가 고정되어 있으며 초과 시 StackOverflowError 발생
     - 접근 속도가 빠르고 시스템에 의해 자동 관리됨
-- 예시:
+- **예시:**
 
 ```kotlin
 fun add(a: Int, b: Int): Int {
