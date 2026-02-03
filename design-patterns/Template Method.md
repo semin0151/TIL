@@ -59,7 +59,7 @@
 
 ## 간단한 예제 (Kotlin)
 ### 추상 클래스
-```
+```kotlin
 abstract class DataLoader {
 
     fun load() { // template method
@@ -81,7 +81,7 @@ abstract class DataLoader {
 ```
 
 ### 하위 클래스
-```
+```kotlin
 class NetworkDataLoader : DataLoader() {
     override fun readData() {
         println("네트워크에서 데이터 읽기")
@@ -99,7 +99,7 @@ class LocalDataLoader : DataLoader() {
 }
 ```
 ### 사용
-```
+```kotlin
 val loader: DataLoader = NetworkDataLoader()
 loader.load()
 ```
