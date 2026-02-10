@@ -23,7 +23,7 @@ brew install terminal-notifier
         "hooks": [
           {
             "type": "command",
-            "command": "terminal-notifier -title 'Claude Code' -message 'Claude가 응답을 완료했습니다' -sender com.claude.notifier"
+            "command": "terminal-notifier -title 'Claude Code' -message 'Claude가 응답을 완료했습니다' -execute 'open -a {터미널 앱}'"
           }
         ]
       }
@@ -37,9 +37,9 @@ brew install terminal-notifier
 |------|------|
 | `-title` | 알림 제목 |
 | `-message` | 알림 본문 |
-| `-sender` | 알림 아이콘으로 사용할 앱의 번들 ID |
+| `-execute` | 알림 클릭 시 실행할 명령어 |
 
 ## 참고
-- `-sender com.claude.notifier`로 Claude 아이콘 적용
+- `-execute 'open -a {터미널앱}'`으로 알림 클릭 시 사용 중인 터미널로 복귀
 - `-sound` 옵션을 제거하여 무음 알림으로 설정
-- `-sender com.mitchellh.ghostty` 같은 옵션은 앱 탐색 과정에서 지연이 발생할 수 있으므로 주의
+- `-sender`와 `-execute`는 충돌하므로 동시 사용 불가
